@@ -1,0 +1,268 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+    /* Primary color */
+}
+
+/* Header */
+header {
+    background-color: #00843D;
+    /* RUBiS Green */
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 700;
+    color: #FF0000;
+    /* RUBiS Red */
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FF0000;
+    /* Hover effect with RUBiS Red */
+}
+
+nav .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #00843D;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .dropdown li {
+    margin: 0.5rem 0;
+}
+
+nav li:hover .dropdown {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background: url('IMG/carburants-stations-service.jpg') no-repeat center center/cover;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-color: #00843D;
+    /* RUBiS Green as fallback */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero button {
+    background-color: #FF0000;
+    /* RUBiS Red */
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button:hover {
+    background-color: #00843D;
+    /* Hover effect with RUBiS Green */
+}
+
+/* Content With Image Layout */
+.content-with-image {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.content-with-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-with-image.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.content-with-image p {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Services and Locations Grid */
+.services,
+.locations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 1.5rem;
+    background: #F5F5F5;
+    /* Light gray for subtle contrast */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00843D;
+    /* RUBiS Green for headings */
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form input,
+form textarea {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+}
+
+form button {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 100px;
+    align-self: center;
+}
+
+form button {
+    background-color: #FF0000;
+    /* RUBiS Red */
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #00843D;
+    /* RUBiS Green */
+}
+
+/* Footer */
+footer {
+    background-color: #00843D;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .content-with-image {
+        flex-direction: column;
+    }
+
+}
